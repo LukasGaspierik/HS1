@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Sidebar from './components/Siderbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { NavMenu } from './components/Navbar/NavbarElements';
 import Announcement from './components/Announcement';
@@ -14,8 +15,10 @@ import Register from "./pages/register";
 function App() {
   return (
     <Router>
+      
       <Announcement />
       <Navbar />
+      <Sidebar />
       <NavMenu />
         <Switch>
         <Route exact path='/'> <Home/> </Route>

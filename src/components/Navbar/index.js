@@ -1,30 +1,45 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 import {
   Nav,
-  NavLink,
-  Bars,
+  NavbarContainer,
+  NavLogo,
+  MobileIcon,
   NavMenu,
+  NavItem,
+  NavLinks,
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to='/'><h1>HYPESTORE</h1>
-        </NavLink>
-        <Bars />
-        <NavMenu>
-          <NavLink to='/shoes' activeStyle>Shoes</NavLink>
-          <NavLink to='/clothing' activeStyle>Clothing</NavLink>
-          <NavLink to='/accessories' activeStyle>Accessories</NavLink>
-          <NavLink to='/signup' activeStyle>Sign up</NavLink>
-        </NavMenu>
-        <NavBtn>
-        <NavBtnLink to='/'>Add Product</NavBtnLink>
-        </NavBtn>
+        <NavbarContainer>
+          <NavLogo to='/'>HYPESTORE</NavLogo>
+          <MobileIcon>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="shoes">Shoes</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="clothing">clothing</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="accessories">accessories</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="signup">signup</NavLinks>
+            </NavItem>
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink to='/shoes'>Add Product</NavBtnLink>
+          </NavBtn>
+        </NavbarContainer>
       </Nav>
     </>
   );
